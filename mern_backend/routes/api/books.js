@@ -1,8 +1,10 @@
+// routes/api/books.js
+
 const express = require('express');
 const router = express.Router();
 
 // Load Book model
-const Book = require('../../models/Books');
+const Book = require('../../models/Book');
 
 // @route GET api/books/test
 // @description tests books route
