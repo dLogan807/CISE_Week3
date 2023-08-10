@@ -13,7 +13,13 @@ const app = express();
 connectDB();
 
 // cors
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors(
+    { 
+        origin: ["https://?.vercel.app"],
+        methods: ["POST", "GET"], 
+        credentials: true 
+    }
+));
 
 // Init Middleware
 app.use(express.json({ extended: false }));
