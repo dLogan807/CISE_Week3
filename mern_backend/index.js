@@ -1,7 +1,7 @@
 // app.js
 
 const express = require('express');
-const connectDB = require('process.env.mongoURI');
+const connectDB = process.env.mongoURI;
 const cors = require('cors');
 
 // routes
