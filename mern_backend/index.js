@@ -15,7 +15,7 @@ connectDB();
 // cors
 app.use(cors(
     { 
-        origin: ["https://cise-week3.vercel.app/"],
+        origin: ["https://cise-week3-frontend-roan.vercel.app/"],
         methods: ["POST", "GET"], 
         credentials: true 
     }
