@@ -1,18 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../App.css";
 
-const BookCard = (props) => {
-  const book = props.book;
+function BookCard(props) {
+  const { book } = props;
 
   return (
-    <div className='card-container'>
+    <div className="card-container">
       <img
-        src='https://images.unsplash.com/photo-1495446815901-a7297e633e8d'
-        alt='Books'
+        src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d"
+        alt="Books"
         height={200}
       />
-      <div className='desc'>
+      <div className="desc">
         <h2>
           <Link to={`/show-book/${book._id}`}>{book.title}</Link>
         </h2>
@@ -21,6 +21,6 @@ const BookCard = (props) => {
       </div>
     </div>
   );
-};
+}
 
 export default BookCard;
