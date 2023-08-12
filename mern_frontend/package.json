@@ -14,12 +14,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-	"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-	"lint-fix": "eslint ./ --fix",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "lint-fix": "eslint ./ --fix",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "cd .. && husky install mern_frontend/.husky",
+    "validate": ""
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +50,8 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.3",
     "prettier": "^3.0.1"
   }
 }

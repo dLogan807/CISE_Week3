@@ -37,7 +37,7 @@ function CreateBook() {
         navigate("/");
       })
       .catch(() => {
-        console.log("Error in CreateBook!");
+        console.log('Error in CreateBook!');
       });
   };
 
