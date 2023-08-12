@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-underscore-dangle */
 import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";

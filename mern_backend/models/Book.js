@@ -1,6 +1,17 @@
 // models/Book.js
 
 const mongoose = require('mongoose');
+var PropTypes = require('prop-types');
+
+Book.propTypes = {
+  title: PropTypes.string,
+  isbn: PropTypes.string,
+  author: PropTypes.string,
+  description: PropTypes.string,
+  published_date: PropTypes.Date,
+  publisher: PropTypes.string,
+  updated_date: PropTypes.Date
+};
 
 const BookSchema = new mongoose.Schema({
   title: {

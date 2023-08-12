@@ -13,7 +13,7 @@ function ShowBookList() {
       .then((res) => {
         setBooks(res.data);
       })
-      .catch((err) => {
+      .catch(() => {
         console.log("Error from ShowBookList");
       });
   }, []);
@@ -21,7 +21,7 @@ function ShowBookList() {
   const bookList =
     books.length === 0
       ? "there is no book record!"
-      : books.map((book, k) => <BookCard book={book} key={k} />);
+      : books.map((book) => <BookCard book={book} key={book.id} />);
 
   return (
     <div className="ShowBookList">

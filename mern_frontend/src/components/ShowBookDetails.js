@@ -1,9 +1,10 @@
+/* eslint-disable no-underscore-dangle */
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import "../App.css";
 import axios from "axios";
 
-function ShowBookDetails(props) {
+function ShowBookDetails() {
   const [book, setBook] = useState({});
 
   const { id } = useParams();
@@ -15,18 +16,18 @@ function ShowBookDetails(props) {
       .then((res) => {
         setBook(res.data);
       })
-      .catch((err) => {
+      .catch(() => {
         console.log("Error from ShowBookDetails");
       });
   }, [id]);
 
-  const onDeleteClick = (id) => {
+  const onDeleteClick = () => {
     axios
       .delete(`https://cise-week3.vercel.app/api/books/${id}`)
-      .then((res) => {
+      .then(() => {
         navigate("/");
       })
-      .catch((err) => {
+      .catch(() => {
         console.log("Error form ShowBookDetails_deleteClick");
       });
   };
@@ -82,8 +83,8 @@ function ShowBookDetails(props) {
           </div>
           <br />
           <div className="col-md-8 m-auto">
-            <h1 className="display-4 text-center">Book's Record</h1>
-            <p className="lead text-center">View Book's Info</p>
+            <h1 className="display-4 text-center">Book&apos;s Record</h1>
+            <p className="lead text-center">View Book&apos;s Info</p>
             <hr /> <br />
           </div>
           <div className="col-md-10 m-auto">{BookItem}</div>

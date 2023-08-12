@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../App.css";
 
-function UpdateBookInfo(props) {
+function UpdateBookInfo() {
   const [book, setBook] = useState({
     title: "",
     isbn: "",
@@ -29,7 +30,7 @@ function UpdateBookInfo(props) {
           publisher: res.data.publisher,
         });
       })
-      .catch((err) => {
+      .catch(() => {
         console.log("Error from UpdateBookInfo");
       });
   }, [id]);
@@ -52,10 +53,10 @@ function UpdateBookInfo(props) {
 
     axios
       .put(`https://cise-week3.vercel.app/api/books${id}`, data)
-      .then((res) => {
+      .then(() => {
         navigate(`/show-book/${id}`);
       })
-      .catch((err) => {
+      .catch(() => {
         console.log("Error in UpdateBookInfo!");
       });
   };
@@ -72,7 +73,7 @@ function UpdateBookInfo(props) {
           </div>
           <div className="col-md-8 m-auto">
             <h1 className="display-4 text-center">Edit Book</h1>
-            <p className="lead text-center">Update Book's Info</p>
+            <p className="lead text-center">Update Book&apos;s Info</p>
           </div>
         </div>
 
